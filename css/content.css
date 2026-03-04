@@ -1,0 +1,86 @@
+/* content.css — Main content area, ASCII output, action buttons */
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 30px;
+  overflow-y: auto;
+  background: var(--dark-bg);
+  color: var(--light-text);
+  box-sizing: border-box;
+  transition: margin-left var(--transition-speed), background var(--transition-speed),
+    color var(--transition-speed);
+  height: 100vh;
+}
+
+.main-content.expanded {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ASCII pre output */
+.ascii-output {
+  background: var(--darker-bg);
+  padding: 20px;
+  white-space: pre;
+  font-family: Consolas, Monaco, "Liberation Mono", monospace;
+  font-size: 7px;
+  line-height: 7px;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  max-height: calc(100vh - 250px);
+  transition: background var(--transition-speed);
+}
+
+/* Side-by-side pane tweaks */
+#side-by-side-pane .row      { align-items: stretch; }
+#side-by-side-pane .col-md-6 { display: flex; flex-direction: column; }
+#side-by-side-pane h4        { text-align: center; margin-bottom: 15px; }
+#side-by-side-pane img       { max-height: calc(100vh - 300px); object-fit: contain; margin: 0 auto; }
+#side-by-side-pane .ascii-output { flex: 1; max-height: none; height: calc(100vh - 300px); }
+
+/* Original image */
+.original-image-container         { text-align: center; margin-bottom: 20px; }
+.original-image-container img     { max-height: calc(100vh - 250px); max-width: 100%; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+
+/* Button row */
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Keyboard shortcut hints */
+.keyboard-shortcuts kbd {
+  background-color: var(--dark-accent);
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px var(--dark-bg) inset;
+  color: var(--light-text);
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 3px 5px;
+  margin: 0 2px;
+}
+
+/* Colorized ASCII mode */
+.color-ascii pre  { color: unset !important; background: unset !important; }
+.color-ascii span { display: inline-block; }
+
+/* Color preview swatch */
+.color-preview {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+}
