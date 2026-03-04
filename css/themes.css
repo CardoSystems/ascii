@@ -1,0 +1,100 @@
+/* themes.css — Light mode and custom theme overrides */
+
+/* Light mode */
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+body.light-mode .sidebar {
+  background: var(--light-accent);
+  color: var(--dark-text);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .control-group {
+  border-bottom: 1px solid #ddd;
+}
+
+body.light-mode .main-content {
+  background: var(--light-bg);
+  color: var(--dark-text);
+}
+
+body.light-mode .ascii-output {
+  background: #f9f9f9;
+  color: var(--dark-text);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .value-label {
+  background: #e0e0e0;
+  color: var(--dark-text);
+}
+
+body.light-mode .upload-area {
+  border-color: var(--primary-color);
+}
+
+body.light-mode .keyboard-shortcuts kbd {
+  background-color: #f7f7f7;
+  color: var(--dark-text);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+}
+
+body.light-mode .history-thumbnail {
+  background-color: #f0f0f0;
+}
+
+body.light-mode .nav-tabs .nav-link.active {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  border-color: #dee2e6;
+}
+
+body.light-mode .quick-settings       { background: var(--light-accent); }
+body.light-mode .quick-settings-toggle { background: var(--light-accent); }
+
+/* Help modal theme fixes */
+#helpModal .modal-content {
+  background-color: var(--darker-bg);
+  color: var(--light-text);
+}
+
+#helpModal .modal-header,
+#helpModal .modal-footer {
+  border-color: var(--dark-accent);
+}
+
+#helpModal .btn-close {
+  filter: invert(1) grayscale(100%);
+}
+
+#helpModal kbd {
+  background-color: var(--dark-accent);
+  color: var(--light-text);
+}
+
+body.light-mode #helpModal .modal-content {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+body.light-mode #helpModal .modal-header,
+body.light-mode #helpModal .modal-footer {
+  border-color: #dee2e6;
+}
+
+body.light-mode #helpModal .btn-close {
+  filter: none;
+}
+
+body.light-mode #helpModal kbd {
+  background-color: #f7f7f7;
+  color: var(--dark-text);
+}
+
+/* Custom theme */
+.custom-theme .ascii-output {
+  transition: background-color 0.3s, color 0.3s;
+}

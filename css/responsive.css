@@ -1,0 +1,56 @@
+/* responsive.css — Breakpoint overrides */
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 300px;
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .main-content {
+    margin-left: 300px;
+  }
+
+  .main-content.expanded {
+    margin-left: var(--sidebar-collapsed-width);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 100%;
+    z-index: 1050;
+  }
+
+  .sidebar.mobile-visible {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .control {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .control label {
+    margin-bottom: 5px;
+    flex: none;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group .btn,
+  .button-group .btn-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

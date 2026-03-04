@@ -1,0 +1,81 @@
+/* upload.css — Upload drop-zone and sample image gallery */
+
+.upload-area {
+  border: 2px dashed var(--primary-color);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-area:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.upload-area i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.upload-area input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-area.dragover {
+  background-color: rgba(74, 144, 226, 0.1);
+  border-color: var(--primary-hover);
+}
+
+/* Sample image thumbnails */
+.sample-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sample-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.sample-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-color: var(--primary-color);
+}
+
+/* Full-page drag-over overlay */
+.drop-zone-highlight {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left: 0 */
+  background-color: rgba(74, 144, 226, 0.2);
+  border: 5px dashed var(--primary-color);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.drop-zone-highlight::after {
+  content: 'Drop Image Here';
+  font-size: 2rem;
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-radius: 10px;
+}

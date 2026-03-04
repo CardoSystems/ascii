@@ -41,16 +41,6 @@ const CHARSETS = {
   detailed: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'."
 };
 
-// Sample images for the gallery
-const SAMPLE_IMAGES = [
-  { name: 'Horse', url: 'https://pub-c9ed83de1a6d4641b28dca4662576f19.r2.dev/%24R0CWCA5.png' },
-  { name: 'Mountain', url: 'https://pub-c9ed83de1a6d4641b28dca4662576f19.r2.dev/%24R5IAD1W.png' },
-  { name: 'Portrait', url: 'https://pub-c9ed83de1a6d4641b28dca4662576f19.r2.dev/%24RA8ETZN.png' },
-  { name: 'Building', url: 'https://pub-c9ed83de1a6d4641b28dca4662576f19.r2.dev/%24RAFGL98.png' },
-  { name: 'Cat', url: 'https://pub-c9ed83de1a6d4641b28dca4662576f19.r2.dev/%24RR23TB9.png' },
-  { name: 'Abstract', url: 'https://pub-c9ed83de1a6d4641b28dca4662576f19.r2.dev/%24RFJ4ZS5.png' }
-];
-
 // Preset configurations
 const PRESETS = {
   default: {
